@@ -51,26 +51,6 @@
 			<p class="category text-white">The Media Officer for the Community Service and Environmental Development Sector @ Mansoura University</p>
 			<a class="btn btn-primary smooth-scroll mr-2" href="https://wa.me/201002825028?text=B.C" target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Text Me</a>
 			<button class="btn btn-primary" id="add-contacts">Save to Contacts</button>
-		<javascript>var saveBtn = document.getElementById("add-contacts");
-saveBtn.addEventListener("click", function () {
-  // Get the contact information from the website
-  var contact = {
-    name: "Ahmed Rashed",
-    phone: "+201002825028",
-    email: "iarashed@live.com"
-  };
-  // create a vcard file
-  var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
-  var blob = new Blob([vcard], { type: "text/vcard" });
-  var url = URL.createObjectURL(blob);
-  
-  const newLink = document.createElement('a');
-  newLink.download = contact.name + ".vcf";
-  newLink.textContent = contact.name;
-  newLink.href = url;
-  
-  newLink.click();
-});</javascript>
         </div>
       </div>
       <div class="section">
@@ -321,5 +301,6 @@ saveBtn.addEventListener("click", function () {
     <script src="js/now-ui-kit.js?ver=1.1.0"></script>
     <script src="js/aos.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
+    <script src="scripts/addme.js"></script>
   </body>
 </html>
