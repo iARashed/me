@@ -1,0 +1,21 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Dr. Ahmed Rashed
+N:Rashed;Ahmed;;Dr.;
+X-PHONETIC-FIRST-NAME:01002825028
+item1.EMAIL;TYPE=INTERNET:iarashed@live.com
+item1.X-ABLabel:
+TEL;TYPE=CELL:+20 100 282 5028
+item2.ADR:;;;Mansoura;;;EG;Mansoura\nEG
+item2.X-ABLabel:
+item3.TITLE:المسئول الإعلامي لقطاع خدمة المُجتمع وتنمية البيئة بجامعة المنص
+ ورة
+item3.X-ABLabel:
+BDAY:19880527
+item4.URL:https\://iarashed.github.io/me/
+item4.X-ABLabel:
+NOTE:Gender: Male
+PHOTO:https://lh3.googleusercontent.com/contacts/AOq4LdZwAva0JLqnaCel2phfzt
+ lgHLsmEH63sqFwm5vnx8exFpRVxTqk
+CATEGORIES:myContacts
+END:VCARD
