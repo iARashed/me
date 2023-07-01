@@ -24,7 +24,7 @@
       <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
           <div class="container">
-            <div class="navbar-translate">Ahmed Rashedd
+            <div class="navbar-translate">Ahmed Rashed
               <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
@@ -50,7 +50,27 @@
           <div class="h2 title">Ahmed H. Rashed</div>
 			<p class="category text-white">The Media Officer for the Community Service and Environmental Development Sector</p>
 			<a class="btn btn-primary smooth-scroll mr-2" href="https://wa.me/201002825028?text=B.C" target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Text Me</a>
-			<a class="btn btn-primary" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Save to Contacts</a>
+			<button class="btn btn-primary" id="add-contacts">Save to Contacts</button>
+		<js>var saveBtn = document.getElementById("add-contacts");
+saveBtn.addEventListener("click", function () {
+  // Get the contact information from the website
+  var contact = {
+    name: "Ahmed Rashed",
+    phone: "+201002825028",
+    email: "iarashed@live.com"
+  };
+  // create a vcard file
+  var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
+  var blob = new Blob([vcard], { type: "text/vcard" });
+  var url = URL.createObjectURL(blob);
+  
+  const newLink = document.createElement('a');
+  newLink.download = contact.name + ".vcf";
+  newLink.textContent = contact.name;
+  newLink.href = url;
+  
+  newLink.click();
+});</js>
         </div>
       </div>
       <div class="section">
