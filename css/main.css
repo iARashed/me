@@ -1104,7 +1104,7 @@
   cursor: pointer;
   color: #FFFFFF; }
 
-  .btn:hover, .btn:focus, .btn:active, .btn.active, .btn:active:focus, .btn:active:hover, .btn.active:focus, .btn.active:hover,
+  .btn:focus, .btn:active, .btn.active, .btn:active:focus, .btn:active:hover, .btn.active:focus, .btn.active:hover,
   .show > .btn.dropdown-toggle,
   .show > .btn.dropdown-toggle:focus,
   .show > .btn.dropdown-toggle:hover,
@@ -2430,16 +2430,16 @@ body {
 .btn-instagram {background-color: #C13584;}
 */
 
-.btn-x {background-color: #55acee; color: #000000;}
+.btn-x {background-color: #55acee; color: #FFFFFF;}
 .btn-x:hover, .btn-x:focus, .btn-x:active {color: #3ea1ec; }
 
-.btn-fb {background-color: #3b5998; color: #000000;}
+.btn-fb {background-color: #3b5998; color: #FFFFFF;}
 .btn-fb:hover, .btn-fb:focus, .btn-fb:active {color: #344e86; }
 
-.btn-instagram {background-color: #dd4b39; color: #000000;}
+.btn-instagram {background-color: #dd4b39; color: #FFFFFF;}
 .btn-instagram:hover, .btn-instagram:focus, .btn-instagram:active {color: #d73925; }
 
-.btn-linkedin {background-color: #0077B5; color: #000000;}
+.btn-linkedin {background-color: #0077B5; color: #FFFFFF;}
 .btn-linkedin:hover, .btn-linkedin:focus, .btn-linkedin:active {color: #00669c; }
 
 .nav-tabs {
