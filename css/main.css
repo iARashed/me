@@ -2423,13 +2423,6 @@ body {
   .nav-align-center .nav-pills {
     display: inline-flex; }
 
-/* ====
-.btn-linkedin {background-color: #0A66C2; color: #FFFFFF;}
-.btn-fb {background-color: #4267B2;}
-.btn-x {background-color: #000000;}
-.btn-instagram {background-color: #C13584;}
-*/
-
 .btn-x {background-color: #55acee; color: #FFFFFF;}
 .btn-x:hover, .btn-x:focus, .btn-x:active {color: #000000; }
 
