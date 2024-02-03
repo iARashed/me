@@ -2431,7 +2431,7 @@ body {
 */
 
 .btn-x {background-color: #55acee; color: #FFFFFF;}
-.btn-x:hover, .btn-x:focus, .btn-x:active {color: #3ea1ec; }
+.btn-x:hover, .btn-x:focus, .btn-x:active {color: #000000; }
 
 .btn-fb {background-color: #3b5998; color: #FFFFFF;}
 .btn-fb:hover, .btn-fb:focus, .btn-fb:active {color: #344e86; }
