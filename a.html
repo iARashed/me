@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ahmed Rashed - Portfolio</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* MNU Brand Colors */
+            --navy-blue: #0A192F;
+            --mnu-blue: #0F3A68;
+            --teal-wave: #008080;
+            --cyan-light: #E0F2F1;
+            --text-main: #334155;
+            --text-muted: #64748B;
+            --bg-body: #F8FAFC;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Hero Background with Wave */
+        .hero-bg {
+            background: linear-gradient(135deg, var(--navy-blue) 0%, var(--mnu-blue) 100%);
+            height: 35vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--bg-body);
+            transform: skewY(-2deg);
+        }
+
+        /* Main Grid Layout */
+        .container {
+            max-width: 1200px;
+            margin: -15vh auto 40px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Cards Style */
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            margin-bottom: 30px;
+        }
+
+        /* Profile Sidebar */
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 5px solid var(--white);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            margin: -80px auto 20px;
+            display: block;
+        }
+
+        .text-center { text-align: center; }
+        
+        .name {
+            font-size: 1.6rem;
+            color: var(--navy-blue);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            color: var(--teal-wave);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            list-style: none;
+            margin-top: 20px;
+            border-top: 1px solid #EEF2F6;
+            padding-top: 20px;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info i {
+            width: 35px;
+            height: 35px;
+            background: var(--cyan-light);
+            color: var(--teal-wave);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-right: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Actions / Buttons */
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--teal-wave);
+            color: var(--white);
+        }
+
+        .btn-primary:hover { background: var(--mnu-blue); }
+
+        .btn-outline {
+            border: 1px solid #CBD5E1;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background: var(--bg-body);
+        }
+
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .section-header i {
+            font-size: 1.5rem;
+            color: var(--teal-wave);
+            margin-right: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 1.4rem;
+            color: var(--navy-blue);
+            font-weight: 700;
+        }
+
+        /* About Text */
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Modern Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: calc(100% - 10px);
+            width: 2px;
+            background: #E2E8F0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item:last-child { margin-bottom: 0; }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 3px solid var(--teal-wave);
+            box-shadow: 0 0 0 4px var(--white);
+        }
+
+        .time-date {
+            font-size: 0.85rem;
+            color: var(--teal-wave);
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: inline-block;
+            background: var(--cyan-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .time-title {
+            font-size: 1.15rem;
+            color: var(--navy-blue);
+            font-weight: 700;
+            margin: 5px 0;
+        }
+
+        .time-org {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .time-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Skills (Tags & Bars) */
+        .skills-wrapper {
+            margin-top: 20px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: var(--bg-body);
+            color: var(--mnu-blue);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #E2E8F0;
+        }
+
+        .progress-item { margin-bottom: 15px; }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #F1F5F9;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--teal-wave), var(--mnu-blue));
+            border-radius: 4px;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: var(--teal-wave); }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                margin-top: -10vh;
+            }
+            .profile-pic { margin-top: -60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-bg"></div>
+
+    <div class="container">
+        <!-- Right Sidebar (Profile Info) -->
+        <aside>
+            <div class="card text-center">
+                <img src="images/ahmed.jpg" alt="Ahmed Rashed" class="profile-pic">
+                <h1 class="name">Dr. Ahmed Rashed</h1>
+                <p class="title">Media Office & Visual Identity | MNU</p>
+                
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/iarashed" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/iarashed" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/iarashed" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+
+                <div class="btn-group">
+                    <a href="https://wa.me/201002825028?text=Hello" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="images/ahmed-rashed.vcf" class="btn btn-outline"><i class="fas fa-address-card"></i> Save Contact</a>
+                </div>
+
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> iarashed@live.com</li>
+                    <li><i class="fas fa-phone-alt"></i> +20 100 282 5028</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Mansoura, Egypt</li>
+                </ul>
+            </div>
+
+            <!-- Skills Section inside Sidebar for cleaner look -->
+            <div class="card">
+                <div class="section-header">
+                    <i class="fas fa-laptop-code"></i>
+                    <h2>Core Skills</h2>
+                </div>
+                
+                <div class="skill-tags">
+                    <span class="tag">Brand Identity</span>
+                    <span class="tag">AI Media Generation</span>
+                    <span class="tag">Video Editing</span>
+                    <span class="tag">Journalism</span>
+                </div>
+
+                <div class="skills-wrapper">
+                    <div class="progress-item">
+                        <div class="progress-label"><span>Graphic Design (PS/AI)</span> <span>95%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label"><span>Web Management (HTML/CSS)</span> <span>90%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label"><span>Media & Public Relations</span> <span>95%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main>
+            <!-- About Section -->
+            <div class="card">
+                <div class="section-header">
+                    <i class="fas fa-user-tie"></i>
+                    <h2>About Me</h2>
+                </div>
+                <p class="about-text">
+                    I hold a Ph.D. in Specific Education (Educational Media - Radio and Television). Currently, I work at <strong>Mansoura National University (MNU)</strong> in the University President's Office. I am passionate about creating compelling visual identities, modern infographics, and leveraging Artificial Intelligence to innovate media production and audio generation.
+                </p>
+                <p class="about-text">
+                    Previously, I served as the Media Officer for the Community Service & Environmental Development Sector at Mansoura University. I also have extensive experience as a lecturer, training students in graphic design, website development, and online journalism.
+                </p>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="card">
+                <div class="section-header">
+                    <i class="fas fa-briefcase"></i>
+                    <h2>Professional Experience</h2>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time-date">Oct 2022 - Present</span>
+                        <h3 class="time-title">The Media Office at the University President's Office</h3>
+                        <div class="time-org">Mansoura National University (MNU)</div>
+                        <p class="time-desc">Leading the visual and digital media presence of MNU. Responsible for branding, logo design concepts incorporating coastal and academic elements, creating promotional materials, and integrating AI tools into the media workflow.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-date">Apr 2019 - Oct 2022</span>
+                        <h3 class="time-title">Media Officer for Community Service Sector</h3>
+                        <div class="time-org">Mansoura University</div>
+                        <p class="time-desc">Acted as the official media spokesperson for the sector and managed technical communications for the Deputy President's office.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-date">2016 - 2022</span>
+                        <h3 class="time-title">Media Lecturer & Front-End Developer</h3>
+                        <div class="time-org">oLessons & Private Academies</div>
+                        <p class="time-desc">Developed educational platforms and delivered lectures on multimedia, digital journalism, and foundational web design technologies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="card">
+                <div class="section-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>Education</h2>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time-date">2015 - 2018</span>
+                        <h3 class="time-title">Ph.D. in Radio and Television</h3>
+                        <div class="time-org">Mansoura University</div>
+                        <p class="time-desc">Conducted an extensive field study on social issues as reflected in digital media and animated sketches, analyzing their impact on the perception of social reality among university students.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <span class="time-date">2012 - 2014</span>
+                        <h3 class="time-title">Master's Degree in Media</h3>
+                        <div class="time-org">Mansoura University</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+  </html>
+  
