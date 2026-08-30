@@ -1,0 +1,3348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+Ahmed H. Rashed | Governance, Administration & Institutional Communication
+</title>
+
+<meta name="description"
+content="Ahmed H. Rashed — Governance, Performance Evaluation, Executive Administration, Media and Institutional Communication professional.">
+
+<meta name="author"
+content="Ahmed H. Rashed">
+
+<meta name="theme-color"
+content="#0b1220">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root{
+
+    --bg:#f6f7f9;
+    --surface:#ffffff;
+
+    --dark:#0b1220;
+    --dark-2:#111a2c;
+
+    --text:#101827;
+    --muted:#697486;
+
+    --line:#dfe4eb;
+
+    --accent:#c96945;
+    --accent-soft:#f4e5df;
+
+    --white:#ffffff;
+
+    --radius:22px;
+
+    --shadow:
+        0 25px 70px rgba(11,18,32,.10);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:"DM Sans",sans-serif;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+body.ar{
+    font-family:"Cairo",sans-serif;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font:inherit;
+}
+
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:var(--dark);
+
+    z-index:9999;
+
+    display:grid;
+
+    place-items:center;
+
+    transition:.6s ease;
+
+}
+
+.loader.hide{
+
+    opacity:0;
+    visibility:hidden;
+
+}
+
+.loader-box{
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.loader-logo{
+
+    width:65px;
+    height:65px;
+
+    border:1px solid #526078;
+
+    border-radius:18px;
+
+    display:grid;
+    place-items:center;
+
+    margin:auto;
+
+    font-weight:700;
+
+}
+
+.loader-line{
+
+    width:100px;
+
+    height:2px;
+
+    background:#29344a;
+
+    margin:22px auto;
+
+    overflow:hidden;
+
+}
+
+.loader-line span{
+
+    display:block;
+
+    height:100%;
+    width:40%;
+
+    background:var(--accent);
+
+    animation:loading 1s infinite;
+
+}
+
+@keyframes loading{
+
+    from{
+        transform:translateX(-100%);
+    }
+
+    to{
+        transform:translateX(300%);
+    }
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:76px;
+
+    z-index:100;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 5vw;
+
+    background:rgba(246,247,249,.82);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(16,24,39,.07);
+
+    transition:.3s ease;
+
+}
+
+.nav.scrolled{
+
+    background:rgba(255,255,255,.95);
+
+    box-shadow:
+        0 10px 35px rgba(11,18,32,.06);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-weight:700;
+
+}
+
+.logo-mark{
+
+    width:38px;
+    height:38px;
+
+    border-radius:12px;
+
+    background:var(--dark);
+
+    color:#fff;
+
+    display:grid;
+
+    place-items:center;
+
+    font-size:11px;
+
+    letter-spacing:-1px;
+
+}
+
+.logo-name{
+
+    font-size:14px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:27px;
+
+    color:#697486;
+
+    font-size:12px;
+
+}
+
+.nav-links a{
+
+    transition:.25s ease;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--accent);
+
+}
+
+.nav-tools{
+
+    display:flex;
+
+    gap:7px;
+
+}
+
+.nav-btn{
+
+    width:38px;
+    height:38px;
+
+    border:1px solid var(--line);
+
+    border-radius:11px;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    color:var(--text);
+
+}
+
+.nav-btn:hover{
+
+    background:var(--dark);
+
+    color:#fff;
+
+}
+
+.menu-btn{
+
+    display:none;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:
+        145px 5vw
+        90px;
+
+    display:grid;
+
+    grid-template-columns:
+        1.2fr
+        .8fr;
+
+    align-items:center;
+
+    gap:90px;
+
+    position:relative;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(201,105,69,.10),
+            transparent 70%
+        );
+
+    top:50px;
+    right:-200px;
+
+    pointer-events:none;
+
+}
+
+.hero-kicker{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#778293;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:.16em;
+
+}
+
+.hero-kicker span{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+}
+
+.hero h1{
+
+    font-size:
+        clamp(
+            48px,
+            7vw,
+            94px
+        );
+
+    line-height:.98;
+
+    letter-spacing:-.065em;
+
+    margin:28px 0;
+
+}
+
+.hero h1 em{
+
+    display:block;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-style:italic;
+
+    font-weight:600;
+
+    color:#394458;
+
+}
+
+.hero-description{
+
+    max-width:720px;
+
+    font-size:18px;
+
+    color:var(--muted);
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    margin:34px 0;
+
+}
+
+.btn{
+
+    min-height:50px;
+
+    padding:
+        0 22px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    border-radius:14px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+.btn-primary{
+
+    background:var(--dark);
+
+    color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--accent);
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+    border:1px solid var(--line);
+
+}
+
+.btn-outline:hover{
+
+    background:#fff;
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.hero-links{
+
+    display:flex;
+
+    gap:20px;
+
+    color:#7b8595;
+
+    font-size:11px;
+
+}
+
+.hero-links a:hover{
+
+    color:var(--accent);
+
+}
+
+
+/* =====================================================
+   HERO VISUAL
+===================================================== */
+
+.hero-visual{
+
+    max-width:470px;
+
+    margin-left:auto;
+
+    position:relative;
+
+}
+
+.profile-frame{
+
+    background:#fff;
+
+    padding:14px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+    transform:rotate(2deg);
+
+    transition:.35s ease;
+
+}
+
+.profile-frame:hover{
+
+    transform:rotate(0)
+               translateY(-7px);
+
+}
+
+.profile-placeholder{
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    border-radius:21px;
+
+    display:grid;
+
+    place-items:center;
+
+    color:#fff;
+
+    font-size:90px;
+
+    font-weight:700;
+
+    letter-spacing:-9px;
+
+    background:
+        radial-gradient(
+            circle at 70% 15%,
+            #47546e,
+            #1c273b 50%,
+            #09101e
+        );
+
+}
+
+.profile-placeholder span{
+
+    color:var(--accent);
+
+}
+
+.hero-badge{
+
+    position:absolute;
+
+    right:-25px;
+
+    top:35px;
+
+    width:105px;
+    height:105px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+    color:#fff;
+
+    display:grid;
+
+    place-items:center;
+
+    text-align:center;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+.hero-caption{
+
+    position:absolute;
+
+    left:-35px;
+
+    bottom:35px;
+
+    width:235px;
+
+    background:var(--dark);
+
+    color:#fff;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.hero-caption small{
+
+    display:block;
+
+    color:#8793a7;
+
+    font-size:9px;
+
+    letter-spacing:.12em;
+
+    margin-bottom:5px;
+
+}
+
+.hero-caption strong{
+
+    font-size:12px;
+
+    line-height:1.4;
+
+    display:block;
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:120px 5vw;
+
+}
+
+.section-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        170px
+        1fr;
+
+    gap:70px;
+
+    border-top:1px solid var(--line);
+
+    padding-top:28px;
+
+}
+
+.section-number{
+
+    font-size:10px;
+
+    color:#8993a3;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+}
+
+.section-title{
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            65px
+        );
+
+    line-height:1.08;
+
+    letter-spacing:-.04em;
+
+    margin-bottom:25px;
+
+}
+
+.section-lead{
+
+    max-width:850px;
+
+    font-size:19px;
+
+    color:var(--muted);
+
+}
+
+
+/* =====================================================
+   PROFESSIONAL PROFILE
+===================================================== */
+
+.profile-points{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:50px;
+
+}
+
+.profile-point{
+
+    padding:25px;
+
+    border:1px solid var(--line);
+
+    border-radius:18px;
+
+    background:#fff;
+
+    transition:.3s ease;
+
+}
+
+.profile-point:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.profile-point span{
+
+    font-size:10px;
+
+    color:var(--accent);
+
+    font-weight:700;
+
+}
+
+.profile-point h3{
+
+    font-size:20px;
+
+    margin:
+        18px 0 5px;
+
+}
+
+.profile-point p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+}
+
+
+/* =====================================================
+   CAREER TIMELINE
+===================================================== */
+
+.timeline{
+
+    margin-top:55px;
+
+}
+
+.timeline-item{
+
+    display:grid;
+
+    grid-template-columns:
+        180px
+        1fr
+        30px;
+
+    gap:40px;
+
+    padding:34px 0;
+
+    border-bottom:1px solid var(--line);
+
+    transition:.3s ease;
+
+}
+
+.timeline-item:hover{
+
+    padding-left:14px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(201,105,69,.05),
+            transparent
+        );
+
+}
+
+.timeline-date{
+
+    font-size:10px;
+
+    font-weight:700;
+
+    color:#8993a3;
+
+    letter-spacing:.08em;
+
+}
+
+.timeline-item h3{
+
+    font-size:23px;
+
+    margin-bottom:3px;
+
+}
+
+.timeline-role{
+
+    color:var(--accent);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.timeline-item p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    max-width:780px;
+
+}
+
+.timeline-arrow{
+
+    color:#9aa3b1;
+
+    transition:.3s ease;
+
+}
+
+.timeline-item:hover
+.timeline-arrow{
+
+    color:var(--accent);
+
+    transform:
+        translate(4px,-4px);
+
+}
+
+.timeline-item.current{
+
+    border-left:3px solid var(--accent);
+
+    padding-left:18px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(201,105,69,.07),
+            transparent
+        );
+
+}
+
+
+/* =====================================================
+   EXECUTIVE ADMINISTRATION
+===================================================== */
+
+.dark-section{
+
+    max-width:none;
+
+    background:var(--dark);
+
+    color:#fff;
+
+}
+
+.dark-inner{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:120px 5vw;
+
+}
+
+.dark-section .section-grid{
+
+    border-color:#273249;
+
+}
+
+.dark-section .section-number{
+
+    color:#7d899e;
+
+}
+
+.dark-section .section-title{
+
+    color:#fff;
+
+}
+
+.dark-section .section-lead{
+
+    color:#9ba6b8;
+
+}
+
+.admin-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:1px;
+
+    background:#29344a;
+
+    border:1px solid #29344a;
+
+    margin-top:60px;
+
+}
+
+.admin-card{
+
+    background:var(--dark);
+
+    padding:32px;
+
+    min-height:235px;
+
+    transition:.3s ease;
+
+}
+
+.admin-card:hover{
+
+    background:#111b2e;
+
+}
+
+.admin-index{
+
+    color:#68758b;
+
+    font-size:10px;
+
+}
+
+.admin-card h3{
+
+    font-size:22px;
+
+    margin:
+        35px 0 8px;
+
+}
+
+.admin-card p{
+
+    color:#8f9bad;
+
+    font-size:12px;
+
+    max-width:480px;
+
+}
+
+
+/* =====================================================
+   GOVERNANCE
+===================================================== */
+
+.governance-box{
+
+    margin-top:55px;
+
+    padding:38px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151f34,
+            #0b1220
+        );
+
+    border:1px solid #2a354b;
+
+}
+
+.governance-box h3{
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+}
+
+.governance-box p{
+
+    color:#929daf;
+
+    font-size:13px;
+
+    max-width:780px;
+
+}
+
+.governance-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin-top:25px;
+
+}
+
+.governance-tags span{
+
+    border:1px solid #344056;
+
+    border-radius:30px;
+
+    padding:7px 12px;
+
+    font-size:10px;
+
+    color:#aeb7c6;
+
+}
+
+
+/* =====================================================
+   MEDIA SKILLS
+===================================================== */
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:55px;
+
+}
+
+.skill{
+
+    border:1px solid var(--line);
+
+    border-radius:19px;
+
+    padding:28px;
+
+    min-height:190px;
+
+    background:#fff;
+
+    transition:.3s ease;
+
+}
+
+.skill:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.skill-number{
+
+    color:#9ca5b4;
+
+    font-size:10px;
+
+}
+
+.skill h3{
+
+    font-size:22px;
+
+    margin:
+        25px 0 7px;
+
+}
+
+.skill p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+}
+
+
+/* =====================================================
+   EDUCATION
+===================================================== */
+
+.education-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
+    margin-top:55px;
+
+}
+
+.education-card{
+
+    border:1px solid #2b354a;
+
+    border-radius:20px;
+
+    background:#10182a;
+
+    padding:30px;
+
+    min-height:350px;
+
+    transition:.3s ease;
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#536078;
+
+}
+
+.education-year{
+
+    font-size:10px;
+
+    color:#8995aa;
+
+    font-weight:700;
+
+}
+
+.education-card h3{
+
+    font-size:29px;
+
+    margin-top:50px;
+
+}
+
+.education-card h4{
+
+    color:#d3d9e2;
+
+    font-size:13px;
+
+    margin-top:4px;
+
+}
+
+.education-card p{
+
+    color:#9ba5b7;
+
+    font-size:12px;
+
+    margin-top:12px;
+
+}
+
+.education-card small{
+
+    color:#778399;
+
+    display:block;
+
+    margin-top:28px;
+
+    font-size:11px;
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact{
+
+    max-width:none;
+
+    background:#e9edf3;
+
+}
+
+.contact-inner{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:120px 5vw;
+
+}
+
+.contact-email{
+
+    display:inline-flex;
+
+    gap:18px;
+
+    align-items:center;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            68px
+        );
+
+    margin-top:25px;
+
+    letter-spacing:-.04em;
+
+    transition:.3s ease;
+
+}
+
+.contact-email:hover{
+
+    color:var(--accent);
+
+}
+
+.contact-details{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    margin-top:25px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:var(--dark);
+
+    color:#8591a5;
+
+    padding:28px 5vw;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:10px;
+
+    letter-spacing:.08em;
+
+}
+
+
+/* =====================================================
+   REVEAL
+===================================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+.mobile-menu{
+
+    display:none;
+
+    position:fixed;
+
+    top:76px;
+
+    left:0;
+    right:0;
+
+    background:#fff;
+
+    z-index:90;
+
+    padding:20px 6vw;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.1);
+
+}
+
+.mobile-menu.open{
+
+    display:block;
+
+}
+
+.mobile-menu a{
+
+    display:block;
+
+    padding:14px 0;
+
+    border-bottom:1px solid var(--line);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+        padding-top:130px;
+
+    }
+
+    .hero-visual{
+
+        margin:auto;
+
+    }
+
+    .section-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .timeline-item{
+
+        grid-template-columns:
+            1fr 30px;
+
+        gap:10px;
+
+    }
+
+    .timeline-date{
+
+        grid-column:1/-1;
+
+    }
+
+    .education-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .hero{
+
+        padding:
+            125px 6vw
+            80px;
+
+    }
+
+    .hero h1{
+
+        font-size:54px;
+
+    }
+
+    .hero-description{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .profile-points{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .admin-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .skills-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .section{
+
+        padding:
+            85px 6vw;
+
+    }
+
+    .dark-inner{
+
+        padding:
+            85px 6vw;
+
+    }
+
+    .contact-inner{
+
+        padding:
+            85px 6vw;
+
+    }
+
+    .contact-email{
+
+        font-size:30px;
+
+        word-break:break-word;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    .hero-caption{
+
+        left:-5px;
+
+    }
+
+    .hero-badge{
+
+        right:0;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- LOADER -->
+
+<div class="loader" id="loader">
+
+    <div class="loader-box">
+
+        <div class="loader-logo">
+            AH
+        </div>
+
+        <div class="loader-line">
+            <span></span>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- NAVIGATION -->
+
+<header class="nav" id="navbar">
+
+    <a href="#home" class="logo">
+
+        <span class="logo-mark">
+            AH
+        </span>
+
+        <span class="logo-name">
+            Ahmed H. Rashed
+        </span>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#experience">
+            Experience
+        </a>
+
+        <a href="#administration">
+            Administration
+        </a>
+
+        <a href="#skills">
+            Skills
+        </a>
+
+        <a href="#education">
+            Education
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="nav-tools">
+
+        <button
+            class="nav-btn"
+            id="languageBtn">
+            AR
+        </button>
+
+        <button
+            class="nav-btn"
+            id="themeBtn">
+            ☾
+        </button>
+
+        <button
+            class="nav-btn menu-btn"
+            id="menuBtn">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- MOBILE MENU -->
+
+<div
+    class="mobile-menu"
+    id="mobileMenu">
+
+    <a href="#about">
+        About
+    </a>
+
+    <a href="#experience">
+        Experience
+    </a>
+
+    <a href="#administration">
+        Administration
+    </a>
+
+    <a href="#skills">
+        Skills
+    </a>
+
+    <a href="#education">
+        Education
+    </a>
+
+    <a href="#contact">
+        Contact
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero" id="home">
+
+
+    <div class="reveal">
+
+        <div class="hero-kicker">
+
+            <span></span>
+
+            GOVERNANCE · ADMINISTRATION · MEDIA
+
+        </div>
+
+
+        <h1>
+
+            Ahmed H. Rashed
+
+            <em>
+                Governance & Institutional Affairs
+            </em>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Professional with extensive experience in
+            university administration, executive office
+            management, governance, performance evaluation,
+            institutional communication and media.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                class="btn btn-primary"
+                href="assets/Ahmed-Rashed-CV.pdf"
+                download>
+
+                Download CV
+
+                <span>↓</span>
+
+            </a>
+
+
+            <a
+                class="btn btn-outline"
+                href="#experience">
+
+                View Experience
+
+                <span>↗</span>
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-links">
+
+            <a href="mailto:iarashed@live.com">
+                Email
+            </a>
+
+            <a
+                href="https://wa.me/201002825028"
+                target="_blank">
+                WhatsApp
+            </a>
+
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-visual reveal">
+
+        <div class="profile-frame">
+
+            <!--
+                Replace this block with your photo.
+                Example:
+
+                <img
+                    src="assets/profile.jpg"
+                    alt="Ahmed H. Rashed">
+
+            -->
+
+            <div class="profile-placeholder">
+
+                AH<span>R</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-badge">
+
+            GOVERNANCE
+
+            <br>
+
+            &
+
+            <br>
+
+            PERFORMANCE
+
+        </div>
+
+
+        <div class="hero-caption">
+
+            <small>
+                CURRENT POSITION
+            </small>
+
+            <strong>
+                Director of Governance &
+                Performance Evaluation Department
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+====================================================== -->
+
+<section
+    class="section reveal"
+    id="about">
+
+    <div class="section-grid">
+
+
+        <div class="section-number">
+
+            01 / ABOUT
+
+        </div>
+
+
+        <div>
+
+            <h2 class="section-title">
+
+                Administration,
+                communication and
+                institutional leadership.
+
+            </h2>
+
+
+            <p class="section-lead">
+
+                My professional journey combines a strong
+                background in media and institutional
+                communication with extensive practical
+                experience in university administrative
+                affairs, executive office management,
+                governance and performance evaluation.
+
+            </p>
+
+
+            <div class="profile-points">
+
+
+                <div class="profile-point">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Executive Administration
+                    </h3>
+
+                    <p>
+                        Experience in managing and following
+                        up executive office activities and
+                        coordinating institutional matters.
+                    </p>
+
+                </div>
+
+
+                <div class="profile-point">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Governance
+                    </h3>
+
+                    <p>
+                        Current responsibility in governance
+                        and institutional performance evaluation.
+                    </p>
+
+                </div>
+
+
+                <div class="profile-point">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Council Affairs
+                    </h3>
+
+                    <p>
+                        Preparing agendas and official minutes
+                        for University Council and Board of Trustees
+                        meetings and following their approval.
+                    </p>
+
+                </div>
+
+
+                <div class="profile-point">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        Institutional Communication
+                    </h3>
+
+                    <p>
+                        Combining media expertise with
+                        institutional communication and
+                        administrative coordination.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+====================================================== -->
+
+<section
+    class="section reveal"
+    id="experience">
+
+    <div class="section-grid">
+
+
+        <div class="section-number">
+
+            02 / EXPERIENCE
+
+        </div>
+
+
+        <div>
+
+            <h2 class="section-title">
+
+                Career progression.
+
+            </h2>
+
+
+            <p class="section-lead">
+
+                A professional path that evolved from media
+                and communication into executive administration,
+                institutional affairs and governance.
+
+            </p>
+
+
+            <div class="timeline">
+
+
+                <!-- CURRENT -->
+
+                <article
+                    class="timeline-item current">
+
+                    <div class="timeline-date">
+
+                        06 AUG 2026 — PRESENT
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            Mansoura National University
+
+                        </h3>
+
+
+                        <div class="timeline-role">
+
+                            Director of Governance &
+                            Performance Evaluation Department
+
+                        </div>
+
+
+                        <p>
+
+                            Leading and coordinating the work
+                            related to institutional governance
+                            and performance evaluation, with a
+                            focus on monitoring, follow-up,
+                            organizational development and
+                            supporting institutional performance.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRESIDENT OFFICE -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-date">
+
+                        16 MAR 2026 —
+                        05 AUG 2026
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            Mansoura National University
+
+                        </h3>
+
+
+                        <div class="timeline-role">
+
+                            Director of the University
+                            President's Office
+
+                        </div>
+
+
+                        <p>
+
+                            Managed and followed up the
+                            administrative and executive work
+                            of the President's Office, coordinated
+                            institutional matters and followed up
+                            correspondence, assignments and
+                            subjects presented to the University
+                            President.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+
+                <!-- COUNCILS -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-date">
+
+                        RESPONSIBILITY
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            University Council &
+                            Board of Trustees Affairs
+
+                        </h3>
+
+
+                        <div class="timeline-role">
+
+                            Agenda · Minutes · Approval Follow-up
+
+                        </div>
+
+
+                        <p>
+
+                            Responsible for preparing the agendas
+                            of the University Council and Board of
+                            Trustees, preparing the official minutes
+                            of their meetings, and following up the
+                            procedures required for their approval.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+
+                <!-- MEDIA OFFICE -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-date">
+
+                        OCT 2022 —
+                        PRESENT
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            Mansoura National University
+
+                        </h3>
+
+
+                        <div class="timeline-role">
+
+                            Media Office · University
+                            President's Office
+
+                        </div>
+
+
+                        <p>
+
+                            Media and institutional communication,
+                            promotional activities, university
+                            content and communication requirements
+                            of the President's Office.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+
+                <!-- MANSOURA UNIVERSITY -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-date">
+
+                        APR 2019 —
+                        OCT 2022
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            Mansoura University
+
+                        </h3>
+
+
+                        <div class="timeline-role">
+
+                            Media Officer · Community Service &
+                            Environmental Development Sector
+
+                        </div>
+
+
+                        <p>
+
+                            Worked as a media officer for the sector
+                            and as a member of the Technical Office
+                            supporting the Vice President, gaining
+                            extensive experience in administrative
+                            coordination and institutional work.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+
+                <!-- LECTURER -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-date">
+
+                        2016 — 2022
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            Media Lecturer
+
+                        </h3>
+
+
+                        <div class="timeline-role">
+
+                            Private Academy
+
+                        </div>
+
+
+                        <p>
+
+                            Teaching media fundamentals,
+                            journalism, web design, media rhetoric,
+                            citizen journalism, social networks,
+                            news and reporting.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+
+                <!-- OLESSONS -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-date">
+
+                        2016 — 2018
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            oLessons.net
+
+                        </h3>
+
+
+                        <div class="timeline-role">
+
+                            Front-End Developer & Lecturer
+
+                        </div>
+
+
+                        <p>
+
+                            Website development and preparation
+                            of visual and video educational content
+                            covering software and digital tools.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADMINISTRATION
+====================================================== -->
+
+<section
+    class="dark-section reveal"
+    id="administration">
+
+    <div class="dark-inner">
+
+        <div class="section-grid">
+
+
+            <div class="section-number">
+
+                03 / ADMINISTRATION
+
+            </div>
+
+
+            <div>
+
+                <h2 class="section-title">
+
+                    Executive & Administrative
+                    Expertise.
+
+                </h2>
+
+
+                <p class="section-lead">
+
+                    Administrative experience developed through
+                    direct work with university leadership,
+                    executive offices, councils and institutional
+                    departments.
+
+                </p>
+
+
+                <div class="admin-grid">
+
+
+                    <div class="admin-card">
+
+                        <span class="admin-index">
+                            01
+                        </span>
+
+                        <h3>
+                            Executive Office Management
+                        </h3>
+
+                        <p>
+
+                            Managing, organizing and following up
+                            executive office activities and ensuring
+                            that institutional matters move efficiently
+                            through the required administrative channels.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="admin-card">
+
+                        <span class="admin-index">
+                            02
+                        </span>
+
+                        <h3>
+                            Council Affairs
+                        </h3>
+
+                        <p>
+
+                            Preparing agendas and official minutes
+                            for the University Council and Board of
+                            Trustees, with follow-up of approval
+                            procedures.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="admin-card">
+
+                        <span class="admin-index">
+                            03
+                        </span>
+
+                        <h3>
+                            Administrative Coordination
+                        </h3>
+
+                        <p>
+
+                            Coordinating with university sectors,
+                            departments and administrative units
+                            to follow up assignments and executive
+                            requirements.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="admin-card">
+
+                        <span class="admin-index">
+                            04
+                        </span>
+
+                        <h3>
+                            Official Correspondence
+                        </h3>
+
+                        <p>
+
+                            Preparing, reviewing and following up
+                            official correspondence, documents,
+                            reports and institutional communications.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="admin-card">
+
+                        <span class="admin-index">
+                            05
+                        </span>
+
+                        <h3>
+                            Follow-up & Reporting
+                        </h3>
+
+                        <p>
+
+                            Monitoring subjects, assignments and
+                            administrative actions while supporting
+                            decision-making through organized
+                            follow-up and reporting.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="admin-card">
+
+                        <span class="admin-index">
+                            06
+                        </span>
+
+                        <h3>
+                            Institutional Coordination
+                        </h3>
+
+                        <p>
+
+                            Connecting administrative,
+                            executive and communication functions
+                            across institutional stakeholders.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="governance-box">
+
+                    <h3>
+
+                        Governance & Performance Evaluation
+
+                    </h3>
+
+
+                    <p>
+
+                        My current role reflects the next stage
+                        of my professional development, moving
+                        from executive administration and institutional
+                        communication toward governance, performance
+                        evaluation and organizational development.
+
+                    </p>
+
+
+                    <div class="governance-tags">
+
+                        <span>
+                            Governance
+                        </span>
+
+                        <span>
+                            Performance Evaluation
+                        </span>
+
+                        <span>
+                            Institutional Development
+                        </span>
+
+                        <span>
+                            Follow-up
+                        </span>
+
+                        <span>
+                            Administrative Coordination
+                        </span>
+
+                        <span>
+                            Institutional Performance
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+====================================================== -->
+
+<section
+    class="section reveal"
+    id="skills">
+
+    <div class="section-grid">
+
+
+        <div class="section-number">
+
+            04 / SKILLS
+
+        </div>
+
+
+        <div>
+
+            <h2 class="section-title">
+
+                A multidisciplinary
+                professional skill set.
+
+            </h2>
+
+
+            <p class="section-lead">
+
+                Combining administrative, institutional,
+                communication, media and digital capabilities.
+
+            </p>
+
+
+            <div class="skills-grid">
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Administrative Management
+                    </h3>
+
+                    <p>
+
+                        Executive follow-up,
+                        administrative coordination,
+                        documentation and office management.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Governance & Evaluation
+                    </h3>
+
+                    <p>
+
+                        Institutional governance,
+                        performance monitoring,
+                        evaluation and follow-up.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Council & Board Affairs
+                    </h3>
+
+                    <p>
+
+                        Agenda preparation, meeting minutes,
+                        documentation and approval follow-up.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Institutional Communication
+                    </h3>
+
+                    <p>
+
+                        Internal and external communication,
+                        executive coordination and institutional
+                        messaging.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Media & Public Relations
+                    </h3>
+
+                    <p>
+
+                        Journalism, news writing, media relations,
+                        public relations and institutional content.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        06
+                    </span>
+
+                    <h3>
+                        Digital & Technical
+                    </h3>
+
+                    <p>
+
+                        Website management, digital content,
+                        HTML, CSS, Photoshop and office applications.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+====================================================== -->
+
+<section
+    class="dark-section reveal"
+    id="education">
+
+    <div class="dark-inner">
+
+        <div class="section-grid">
+
+
+            <div class="section-number">
+
+                05 / EDUCATION
+
+            </div>
+
+
+            <div>
+
+                <h2 class="section-title">
+
+                    Academic foundation.
+
+                </h2>
+
+
+                <div class="education-grid">
+
+
+                    <article class="education-card">
+
+                        <span class="education-year">
+
+                            2015 — 2018
+
+                        </span>
+
+                        <h3>
+                            Ph.D.
+                        </h3>
+
+                        <h4>
+                            Educational Media
+                            · Radio & Television
+                        </h4>
+
+                        <p>
+                            Mansoura University
+                        </p>
+
+                        <small>
+
+                            Research focused on social issues
+                            represented in animated sketches on
+                            YouTube channels and their relationship
+                            to university students' perception of
+                            social reality.
+
+                        </small>
+
+                    </article>
+
+
+
+                    <article class="education-card">
+
+                        <span class="education-year">
+
+                            2012 — 2014
+
+                        </span>
+
+                        <h3>
+                            Master's
+                        </h3>
+
+                        <h4>
+                            Media · Radio & Television
+                        </h4>
+
+                        <p>
+                            Mansoura University
+                        </p>
+
+                        <small>
+
+                            Analytical and field study of satirical
+                            television programs and their influence
+                            on university students' attitudes toward
+                            political topics.
+
+                        </small>
+
+                    </article>
+
+
+
+                    <article class="education-card">
+
+                        <span class="education-year">
+
+                            2005 — 2009
+
+                        </span>
+
+                        <h3>
+                            Bachelor's
+                        </h3>
+
+                        <h4>
+                            Specific Education
+                            · Media Department
+                        </h4>
+
+                        <p>
+                            Mansoura University
+                        </p>
+
+                        <small>
+
+                            Academic background in media,
+                            journalism and communication.
+
+                        </small>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section
+    class="contact reveal"
+    id="contact">
+
+    <div class="contact-inner">
+
+        <div class="section-grid">
+
+
+            <div class="section-number">
+
+                06 / CONTACT
+
+            </div>
+
+
+            <div>
+
+                <h2 class="section-title">
+
+                    Let's connect.
+
+                </h2>
+
+
+                <p class="section-lead">
+
+                    For professional opportunities,
+                    institutional collaboration or
+                    communication and administrative
+                    projects.
+
+                </p>
+
+
+                <a
+                    class="contact-email"
+                    href="mailto:iarashed@live.com">
+
+                    iarashed@live.com
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+
+                <div class="contact-details">
+
+                    <span>
+                        📍 Mansoura, Egypt
+                    </span>
+
+                    <a href="tel:+201002825028">
+
+                        ☎ +20 100 282 5028
+
+                    </a>
+
+                    <a
+                        href="https://wa.me/201002825028"
+                        target="_blank">
+
+                        WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <span>
+        © 2026 Ahmed H. Rashed
+    </span>
+
+    <span>
+        GOVERNANCE · ADMINISTRATION · MEDIA
+    </span>
+
+</footer>
+
+
+
+<script>
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+window.addEventListener(
+    "load",
+    () => {
+
+        setTimeout(
+            () => {
+
+                document
+                    .getElementById("loader")
+                    .classList.add("hide");
+
+            },
+            600
+        );
+
+    }
+);
+
+
+/* =====================================================
+   NAV SCROLL
+===================================================== */
+
+const navbar =
+    document.getElementById("navbar");
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if(
+            window.scrollY > 30
+        ){
+
+            navbar.classList.add("scrolled");
+
+        }else{
+
+            navbar.classList.remove("scrolled");
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   REVEAL
+===================================================== */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target
+                            .classList
+                            .add("show");
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(
+        element => {
+
+            observer.observe(element);
+
+        }
+    );
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+menuBtn.addEventListener(
+    "click",
+    () => {
+
+        mobileMenu
+            .classList
+            .toggle("open");
+
+    }
+);
+
+
+document
+    .querySelectorAll(
+        "#mobileMenu a"
+    )
+    .forEach(
+        link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    mobileMenu
+                        .classList
+                        .remove("open");
+
+                }
+            );
+
+        }
+    );
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+const themeBtn =
+    document.getElementById("themeBtn");
+
+let dark =
+    localStorage.getItem(
+        "theme"
+    ) === "dark";
+
+
+function updateTheme(){
+
+    if(dark){
+
+        document.body.style.background =
+            "#0b1220";
+
+        document.body.style.color =
+            "#eef2f7";
+
+        themeBtn.textContent =
+            "☀";
+
+    }else{
+
+        document.body.style.background =
+            "";
+
+        document.body.style.color =
+            "";
+
+        themeBtn.textContent =
+            "☾";
+
+    }
+
+}
+
+
+updateTheme();
+
+
+themeBtn.addEventListener(
+    "click",
+    () => {
+
+        dark=!dark;
+
+        localStorage.setItem(
+            "theme",
+            dark
+            ? "dark"
+            : "light"
+        );
+
+        updateTheme();
+
+    }
+);
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+const languageBtn =
+    document.getElementById(
+        "languageBtn"
+    );
+
+
+languageBtn.addEventListener(
+    "click",
+    () => {
+
+        const isArabic =
+            document.documentElement
+                .dir !== "rtl";
+
+        document.documentElement.dir =
+            isArabic
+            ? "rtl"
+            : "ltr";
+
+        document.documentElement.lang =
+            isArabic
+            ? "ar"
+            : "en";
+
+        document.body.classList.toggle(
+            "ar",
+            isArabic
+        );
+
+        languageBtn.textContent =
+            isArabic
+            ? "EN"
+            : "AR";
+
+    }
+);
+
+</script>
+
+</body>
+</html>
