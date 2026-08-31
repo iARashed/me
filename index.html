@@ -354,10 +354,239 @@ footer{
   .admin-row span{font-size:11px}
   footer{flex-direction:column;gap:12px;align-items:flex-start}
 }
+
+/* =========================================================
+   MOBILE HERO — CLEAN, ISOLATED LAYOUT
+   ========================================================= */
+@media (max-width:650px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* Fixed navigation gets its own space. */
+  .hero{
+    min-height:0;
+    width:100%;
+    padding:105px 6vw 55px;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:34px;
+    overflow:hidden;
+  }
+
+  .hero-copy{
+    width:100%;
+    max-width:100%;
+    order:1;
+  }
+
+  .hero-photo{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    min-height:0;
+    margin:0;
+    order:2;
+  }
+
+  .photo{
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 5;
+    min-height:0;
+  }
+
+  .photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .eyebrow{
+    font-size:10px;
+    margin-bottom:0;
+  }
+
+  .hero h1{
+    margin:20px 0 18px;
+  }
+
+  .full-name{
+    font-size:18px;
+    line-height:1.25;
+    white-space:nowrap;
+  }
+
+  .role{
+    font-size:21px;
+    line-height:1.25;
+    margin-top:14px;
+  }
+
+  .hero-desc{
+    width:100%;
+    max-width:100%;
+    font-size:14px;
+    line-height:1.8;
+    padding-left:14px;
+  }
+
+  .contacts{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:20px;
+  }
+
+  .contact{
+    min-width:0;
+    font-size:10px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .actions{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:22px;
+  }
+
+  .btn{
+    width:100%;
+    padding:0 10px;
+    font-size:9px;
+  }
+
+  .photo-tag{
+    right:0;
+    bottom:16px;
+    width:78%;
+    padding:12px 14px;
+  }
+
+  .photo-tag small{
+    font-size:7px;
+  }
+
+  .photo-tag strong{
+    font-size:9px;
+  }
+
+  /* Make sure the next section starts after the complete Hero. */
+  .hero + .section{
+    position:relative;
+    clear:both;
+  }
+
+  /* =====================================================
+     MOBILE CAREER — ONE COLUMN ONLY
+     ===================================================== */
+  .career{
+    width:100%;
+    overflow:hidden;
+  }
+
+  .career .container{
+    width:88%;
+    max-width:none;
+    margin:0 auto;
+  }
+
+  .career .timeline{
+    position:relative;
+    display:block;
+    width:100%;
+    max-width:none;
+    margin:38px 0 0;
+    padding:0 0 15px 34px;
+  }
+
+  .career .timeline-line{
+    position:absolute;
+    display:block;
+    left:9px;
+    top:0;
+    bottom:0;
+    width:2px;
+    transform:none;
+    background:#c9d3da;
+  }
+
+  .career .timeline-item,
+  .career .timeline-item.left,
+  .career .timeline-item.right{
+    position:relative;
+    display:block;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    margin:0;
+    padding:0 0 28px 22px;
+    text-align:left;
+  }
+
+  .career .timeline-item.left .timeline-dot,
+  .career .timeline-item.right .timeline-dot{
+    position:absolute;
+    left:1px;
+    right:auto;
+    top:20px;
+    width:16px;
+    height:16px;
+  }
+
+  .career .timeline-item.left::after,
+  .career .timeline-item.right::after{
+    position:absolute;
+    left:9px;
+    right:auto;
+    top:27px;
+    width:22px;
+    height:1px;
+  }
+
+  .career .timeline-card{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    margin:0;
+    padding:18px 17px;
+    text-align:left;
+  }
+
+  .career .timeline-date{
+    font-size:9px;
+    line-height:1.5;
+  }
+
+  .career .timeline-card h3{
+    font-size:16px;
+    line-height:1.4;
+  }
+
+  .career .timeline-role{
+    font-size:10px;
+    line-height:1.6;
+  }
+
+  .career .timeline-card p{
+    font-size:10px;
+    line-height:1.75;
+  }
+}
+
+.hero h1,.role,.full-name{overflow-wrap:normal}
 </style>
 </head>
 
 <body>
+
 <header class="nav">
   <a class="logo" href="#home"><span class="logo-mark">AR</span><span>AHMED RASHED</span></a>
 
@@ -401,9 +630,9 @@ footer{
 
     <div class="contacts">
       <a class="contact" href="mailto:iarashed@live.com"><span class="contact-icon">✉</span>iarashed@live.com</a>
-      <!-- <a class="contact" href="tel:+201002825028"><span class="contact-icon">☎</span>+20 100 282 5028</a> -->
-      <a class="contact" href="https://www.linkedin.com/in/iarashed" target="_blank"><span class="contact-icon">in</span>LinkedIn</a>
-      <a class="contact" href="https://wa.me/@iARashed" target="_blank"><span class="contact-icon">◉</span>WhatsApp</a>
+      <a class="contact" href="tel:+201002825028"><span class="contact-icon">☎</span>+20 100 282 5028</a>
+      <a class="contact" href="https://www.linkedin.com/" target="_blank"><span class="contact-icon">in</span>LinkedIn</a>
+      <a class="contact" href="https://wa.me/201002825028" target="_blank"><span class="contact-icon">◉</span>WhatsApp</a>
     </div>
 
     <div class="actions">
@@ -415,7 +644,7 @@ footer{
   <div class="hero-photo reveal">
     <div class="photo">
       <img src="assets/profile.jpg" alt="Ahmed H. Rashed"
-           onerror="this.src='images/ahmed.jpg'">
+           onerror="this.src='assets/portrait-placeholder.svg'">
       <div class="photo-tag">
         <small>CURRENT POSITION</small>
         <strong>Director of Governance &amp; Performance Evaluation Department</strong>
