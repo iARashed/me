@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ahmed H. Rashed</title>
+<title>Ahmed H. Rashed | Governance & Institutional Affairs</title>
 <meta name="description" content="Ahmed H. Rashed — Governance, Performance Evaluation, Executive Administration and Institutional Communication.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +35,524 @@ button{font:inherit}
 .brand{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:800;font-size:14px}
 .brand-mark{font-size:14px;font-family:Georgia,serif;font-weight:400;letter-spacing:-6px;margin-right:3px}
 .nav-links{display:flex;gap:25px;font-size:14px;font-weight:700;color:#2d3b4a}
+.nav-links a{padding:27px 0;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan);border-bottom-color:var(--cyan)}
+.nav-tools{display:flex;gap:8px}.tool{height:34px;min-width:34px;padding:0 9px;border:1px solid #d9e0e5;background:#fff;border-radius:7px;color:var(--navy);cursor:pointer;font-size:14px}
+.hamb{display:none}
+
+.hero h1 .full-name{display:block;font-family:"DM Sans",sans-serif;font-size:18px;line-height:1.2;font-weight:800;letter-spacing:-.02em;white-space:nowrap;color:#fff;text-transform:none;}
+/* HERO */
+.hero{
+ min-height:100vh;background:var(--navy);color:#fff;padding:120px 6vw 45px;
+ position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 470px;align-items:center;gap:60px
+}
+.hero:before{
+ content:"";position:absolute;inset:0;
+ background:
+ linear-gradient(135deg,transparent 0 53%,rgba(18,82,112,.38) 53.2% 63%,transparent 63.2%),
+ linear-gradient(135deg,transparent 0 70%,rgba(21,111,142,.24) 70.2% 76%,transparent 76.2%),
+ radial-gradient(circle at 86% 35%,rgba(18,164,197,.12),transparent 27%)
+}
+.hero:after{content:"";position:absolute;width:620px;height:620px;border:1px solid rgba(83,197,219,.08);border-radius:50%;right:-300px;top:60px}
+.hero-content{position:relative;z-index:2;max-width:730px}
+.eyebrow{display:flex;align-items:center;gap:11px;color:var(--gold2);font-size:14px;font-weight:800;letter-spacing:.12em}
+.eyebrow i{display:block;width:34px;height:2px;background:var(--gold)}
+.hero h1{font-size:14px;line-height:.88;letter-spacing:-.065em;margin:23px 0 14px}
+.hero h1 span{display:block}
+.hero h1 .role{font-size:14px;line-height:1.25;color:var(--gold2);letter-spacing:-.025em;margin-top:18px}
+.hero-desc{max-width:670px;color:#c4d0d9;font-size:14px;line-height:1.9;border-left:2px solid var(--cyan);padding-left:16px}
+.contact-row{display:flex;flex-wrap:wrap;gap:18px 26px;margin-top:21px}
+.contact-link{font-size:14px;color:#e5ebef;display:flex;align-items:center;gap:8px;border-bottom:1px solid #2d4658;padding-bottom:5px}
+.contact-link:hover{color:var(--cyan2);border-color:var(--cyan)}
+.contact-icon{width:26px;height:26px;border:1px solid #486173;border-radius:5px;display:grid;place-items:center;font-size:14px}
+.hero-actions{display:flex;gap:10px;margin-top:23px}
+.btn{height:46px;padding:0 19px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-size:14px;font-weight:800;letter-spacing:.06em}
+.btn-primary{background:transparent;border:1px solid var(--gold);color:var(--gold2)}
+.btn-primary:hover{background:var(--gold);color:var(--navy)}
+.btn-secondary{border:1px solid #3b5365;color:#fff}.btn-secondary:hover{border-color:var(--cyan);color:var(--cyan2)}
+
+.hero-photo{position:relative;z-index:2;align-self:stretch;display:flex;align-items:flex-end;justify-content:center}
+.photo-frame{width:100%;max-width:470px;height:650px;position:relative;overflow:hidden}
+.photo-frame:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,rgba(7,27,43,.75));z-index:2}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9)}
+.photo-label{position:absolute;z-index:3;right:0;bottom:28px;background:var(--gold);color:var(--navy);padding:13px 18px;width:250px}
+.photo-label small{display:block;font-size:14px;font-weight:800;letter-spacing:.12em}
+.photo-label strong{font-size:14px;line-height:1.45;display:block;margin-top:3px}
+
+/* SECTION BASICS */
+.section{padding:92px 0}
+.section-head{display:flex;gap:25px;align-items:flex-start}
+.section-icon{width:60px;height:60px;flex:0 0 60px;border-radius:8px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:14px}
+.section-title{font-size:14px;color:var(--navy);font-weight:800;display:flex;align-items:center;gap:14px}
+.section-title:after{content:"";width:44px;height:2px;background:var(--gold)}
+.section-subtitle{font-size:14px;color:var(--muted);max-width:720px;margin-top:5px}
+.about-text{max-width:800px;margin-top:22px;margin-left:85px;color:#3f4d5b;font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:38px 0 0 85px}
+.stat{display:flex;gap:13px;align-items:flex-start;padding:0 22px;border-right:1px solid #ccd5db}
+.stat:first-child{padding-left:0}.stat:last-child{border-right:0}
+.stat-icon{font-size:14px;color:var(--navy)}.stat-num{font-size:14px;font-weight:800;color:var(--navy);line-height:1}.stat-label{font-size:14px;color:#53616f;line-height:1.5;margin-top:4px}
+
+/* CAREER TIMELINE */
+.career{background:#f0f3f6}
+.timeline{position:relative;margin:45px auto 0;max-width:920px;padding:10px 0 20px}
+.timeline:before{content:"";position:absolute;top:0;bottom:0;left:50%;width:2px;background:#cad4db;transform:translateX(-50%)}
+.tl-item{width:50%;position:relative;padding:0 42px 38px}
+.tl-item:nth-child(odd){margin-right:auto;text-align:right}
+.tl-item:nth-child(even){margin-left:50%;text-align:left}
+.tl-item:before{content:"";position:absolute;top:24px;width:42px;height:1px;background:#b9c5cd}
+.tl-item:nth-child(odd):before{right:0}.tl-item:nth-child(even):before{left:0}
+.tl-dot{position:absolute;top:17px;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--cyan);box-shadow:0 0 0 4px rgba(24,164,197,.08);z-index:2}
+.tl-item:nth-child(odd) .tl-dot{right:-7px}.tl-item:nth-child(even) .tl-dot{left:-7px}
+.tl-card{background:#fff;border:1px solid #e0e6ea;border-radius:7px;padding:19px 21px;box-shadow:0 7px 20px rgba(7,27,43,.06);transition:.25s}
+.tl-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.tl-item.current .tl-card{border-top:3px solid var(--gold)}
+.tl-date{font-size:14px;font-weight:800;color:var(--cyan);letter-spacing:.06em}
+.tl-card h3{font-size:14px;color:var(--navy);margin-top:5px}
+.tl-role{font-size:14px;color:#a26c25;font-weight:800;margin-top:2px}
+.tl-card p{font-size:14px;color:var(--muted);margin-top:7px}
+.current-badge{display:inline-block;background:var(--navy);color:#fff;padding:3px 7px;border-radius:3px;font-size:14px;letter-spacing:.08em;margin-bottom:5px}
+
+/* SPLIT ADMIN + SKILLS */
+.split-section{background:var(--navy);color:#fff;padding:0}
+.split-grid{display:grid;grid-template-columns:1fr 1fr}
+.split-col{padding:78px 5vw 82px}
+.split-col + .split-col{border-left:1px solid rgba(213,154,57,.7)}
+.split-col .section-title{color:#fff}.split-col .section-subtitle{color:#9eb0bd}
+.admin-list{margin-top:29px;display:grid;gap:11px}
+.admin-item{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center}
+.admin-icon{width:30px;height:30px;background:#12405a;border-radius:5px;display:grid;place-items:center;color:#b7d6df;font-size:14px}
+.admin-item span{font-size:14px;color:#e7edf1}
+
+.skills-list{margin-top:31px;display:grid;gap:17px}
+.skill-row{display:grid;grid-template-columns:170px 1fr 38px;gap:13px;align-items:center}
+.skill-name{font-size:14px;color:#edf2f5}
+.bar{height:6px;background:#203c4e;border-radius:20px;overflow:visible;position:relative}
+.bar-fill{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),#3bc0d7);border-radius:20px;position:relative;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.bar-fill:after{content:"";position:absolute;right:-4px;top:50%;width:10px;height:10px;background:#fff;border:2px solid var(--cyan);border-radius:50%;transform:translateY(-50%)}
+.skill-pct{font-size:14px;color:#fff;text-align:right}
+
+/* EDUCATION */
+.education{background:#fff;padding:78px 0}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:40px}
+.edu-card{border:1px solid var(--line);padding:25px;background:#fff;min-height:250px;position:relative;overflow:hidden}
+.edu-card:after{content:"";position:absolute;right:-30px;bottom:-35px;width:120px;height:120px;border:1px solid #e9edf0;border-radius:50%}
+.edu-year{font-size:14px;font-weight:800;color:var(--cyan);letter-spacing:.08em}
+.edu-card h3{font-size:14px;color:var(--navy);margin-top:36px}.edu-card h4{font-size:14px;color:#8e642f;margin-top:2px}.edu-card p{font-size:14px;color:var(--muted);margin-top:9px}.edu-card small{display:block;font-size:14px;color:#87929c;margin-top:18px;line-height:1.65}
+
+/* FOOTER */
+footer{background:#05131f;color:#8ea0ad;padding:23px 6vw;display:flex;justify-content:space-between;font-size:14px}
+.back-top{width:31px;height:31px;border-radius:50%;background:var(--cyan);color:#fff;display:grid;place-items:center;margin-top:-5px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:.65s}.reveal.show{opacity:1;transform:none}
+
+/* DARK MODE */
+body.dark{background:#071722;color:#edf3f6}
+body.dark .navbar{background:rgba(7,23,34,.96);border-color:#263c4b}
+body.dark .brand,body.dark .nav-links,body.dark .tool{color:#fff}
+body.dark .tool{background:#0c2433;border-color:#314857}
+body.dark .section{background:#071722}.dark .section-title,body.dark .section-title{color:#fff}
+body.dark .about-text,body.dark .section-subtitle{color:#a4b2bc}
+body.dark .stats .stat{border-color:#2c404e}.dark .stat-num,body.dark .stat-num{color:#fff}
+body.dark .career{background:#0b1e2c}.dark .tl-card,body.dark .tl-card{background:#102a3a;border-color:#294252}.dark .tl-card h3,body.dark .tl-card h3{color:#fff}
+body.dark .education{background:#071722}.dark .edu-card,body.dark .edu-card{background:#102838;border-color:#294252}.dark .edu-card h3,body.dark .edu-card h3{color:#fff}
+body.dark .edu-card p,body.dark .edu-card small{color:#9eabb4}
+
+
+/* Typography controls */
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media(max-width:950px){
+  .nav-links{display:none}
+  .hamb{display:block}
+
+  .hero{
+    grid-template-columns:1fr;
+    gap:40px;
+    padding-top:115px;
+  }
+  .hero-photo{
+    order:-1;
+  }
+  .photo-frame{
+    height:500px;
+    max-width:520px;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-left:85px;
+  }
+  .stat{
+    border-right:0;
+    padding:0;
+  }
+
+  .split-grid{
+    grid-template-columns:1fr;
+  }
+  .split-col+.split-col{
+    border-left:0;
+    border-top:1px solid rgba(213,154,57,.7);
+  }
+  .skills-list{
+    max-width:700px;
+  }
+  .edu-grid{
+    grid-template-columns:1fr;
+  }
+
+  .mobile-menu{
+    position:fixed;
+    top:72px;
+    left:0;
+    right:0;
+    z-index:95;
+    background:#fff;
+    border-bottom:1px solid #dfe5e9;
+    padding:10px 6vw;
+  }
+  .mobile-menu.open{
+    display:block;
+  }
+  .mobile-menu a{
+    display:block;
+    padding:10px 0;
+    border-bottom:1px solid #edf0f2;
+    font-size:10px;
+    font-weight:700;
+    color:#172b3b;
+  }
+  body.dark .mobile-menu{
+    background:#0a1f2d;
+    border-color:#29404e;
+  }
+  body.dark .mobile-menu a{
+    color:#e8eff3;
+  }
+}
+
+@media(max-width:650px){
+  .navbar{
+    padding:0 5vw;
+  }
+
+  .brand{
+    font-size:14px;
+  }
+
+  .hero{
+    padding:105px 6vw 45px;
+  }
+
+  .hero h1{
+    font-size:14px;
+  }
+
+  .hero h1 .full-name{
+    font-size:18px;
+    white-space:nowrap;
+  }
+
+  .hero-desc{
+    font-size:14px;
+  }
+
+  .photo-frame{
+    height:430px;
+  }
+
+  .photo-label{
+    right:0;
+    bottom:15px;
+    width:225px;
+  }
+
+  .section{
+    padding:72px 0;
+  }
+
+  .section-head{
+    gap:14px;
+  }
+
+  .section-icon{
+    width:48px;
+    height:48px;
+    flex-basis:48px;
+    font-size:14px;
+  }
+
+  .section-title{
+    font-size:14px;
+  }
+
+  .about-text,
+  .stats{
+    margin-left:0;
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat{
+    padding:0;
+  }
+
+  .stat-num{
+    font-size:14px;
+  }
+
+  /* ===== MOBILE TIMELINE FIX ===== */
+  .timeline{
+    width:100%;
+    max-width:100%;
+    margin:32px 0 0;
+    padding:8px 0 15px 32px;
+    position:relative;
+  }
+
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#cbd5dc;
+    transform:none;
+  }
+
+  .tl-item,
+  .tl-item:nth-child(odd),
+  .tl-item:nth-child(even){
+    width:100%;
+    margin:0;
+    padding:0 0 26px 22px;
+    text-align:left;
+    position:relative;
+  }
+
+  .tl-item::before,
+  .tl-item:nth-child(odd)::before,
+  .tl-item:nth-child(even)::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    right:auto;
+    top:24px;
+    width:22px;
+    height:1px;
+    background:#b9c5cd;
+  }
+
+  .tl-item .tl-dot,
+  .tl-item:nth-child(odd) .tl-dot,
+  .tl-item:nth-child(even) .tl-dot{
+    left:3px;
+    right:auto;
+    top:17px;
+  }
+
+  .tl-card{
+    display:block;
+    width:100%;
+    min-width:0;
+    padding:18px 17px;
+    text-align:left;
+  }
+
+  .tl-card h3{
+    font-size:15px;
+    line-height:1.45;
+  }
+
+  .tl-role{
+    font-size:10px;
+    line-height:1.6;
+  }
+
+  .tl-card p{
+    font-size:10px;
+    line-height:1.75;
+  }
+
+  .tl-date{
+    font-size:9px;
+    line-height:1.5;
+  }
+
+  .current-badge{
+    font-size:9px;
+  }
+
+  .split-col{
+    padding:65px 6vw;
+  }
+
+  .skill-row{
+    grid-template-columns:1fr 48px;
+    gap:8px;
+  }
+
+  .bar{
+    grid-column:1/-1;
+    grid-row:2;
+  }
+
+  .skill-pct{
+    grid-column:2;
+    grid-row:1;
+  }
+
+  .admin-item span{
+    font-size:14px;
+  }
+
+  footer{
+    flex-direction:column;
+    gap:10px;
+  }
+}
+
+/* ===== FINAL MOBILE LAYOUT ===== */
+@media (max-width:650px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+
+  .career{width:100%;overflow:hidden}
+  .career .container{width:calc(100% - 32px);max-width:none;margin:0 auto}
+
+  .career .timeline{
+    display:block;
+    position:relative;
+    width:100%;
+    max-width:none;
+    margin:34px 0 0;
+    padding:8px 0 20px 36px;
+  }
+
+  .career .timeline::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#cbd5dc;
+    transform:none;
+  }
+
+  .career .tl-item,
+  .career .tl-item:nth-child(odd),
+  .career .tl-item:nth-child(even){
+    display:block;
+    float:none;
+    clear:both;
+    position:relative;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    margin:0;
+    padding:0 0 30px 22px;
+    text-align:left;
+  }
+
+  .career .tl-item::before,
+  .career .tl-item:nth-child(odd)::before,
+  .career .tl-item:nth-child(even)::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    right:auto;
+    top:24px;
+    width:22px;
+    height:1px;
+    background:#b9c5cd;
+  }
+
+  .career .tl-item .tl-dot,
+  .career .tl-item:nth-child(odd) .tl-dot,
+  .career .tl-item:nth-child(even) .tl-dot{
+    position:absolute;
+    left:3px;
+    right:auto;
+    top:17px;
+    width:15px;
+    height:15px;
+    z-index:5;
+  }
+
+  .career .tl-card{
+    display:block;
+    position:relative;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    height:auto;
+    margin:0;
+    padding:18px 17px;
+    text-align:left;
+    overflow:visible;
+  }
+
+  .career .tl-card h3{font-size:15px;line-height:1.45;overflow-wrap:break-word}
+  .career .tl-role{font-size:10px;line-height:1.6;overflow-wrap:break-word}
+  .career .tl-card p{font-size:10px;line-height:1.75;overflow-wrap:break-word}
+  .career .tl-date{font-size:9px;line-height:1.5;white-space:normal}
+  .career .current-badge{font-size:9px}
+
+  .hero{position:relative;overflow:hidden}
+  .hero-photo{position:relative;z-index:2;width:100%;height:auto;min-height:0;display:flex;order:-1}
+  .hero-photo .photo-frame{position:relative;width:100%;max-width:520px;height:430px;margin:0 auto}
+}
+
+.tool:disabled{opacity:.38;cursor:not-allowed}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+<a class="brand" href="#home"><span class="brand-mark">AR</span><span>AHMED RASHED</span></a>
+<nav class="nav-links">
+<a href="#home" class="active">HOME</a><a href="#about">ABOUT</a><a href="#career">CAREER</a><a href="#administration">ADMINISTRATION</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a>
+</nav>
+<div class="nav-tools"><button class="tool" id="fontDown" aria-label="Decrease font size" title="Decrease font size">A−</button><button class="tool" id="fontReset" aria-label="Reset font size" title="Reset font size">A</button><button class="tool" id="fontUp" aria-label="Increase font size" title="Increase font size">A+</button><button class="tool" id="theme">☼</button><button class="tool" id="lang">AR</button><button class="tool hamb" id="hamb">☰</button></div>
+</header>
+<div class="mobile-menu" id="mobileMenu"></div>
+
+<section class="hero" id="home">
+<div class="hero-content reveal">
+<div class="eyebrow"><i></i> EXECUTIVE LEADERSHIP</div>
+<h1><span class="full-name">Ahmed H. Rashed</span><div class="role">Director of Governance &<br>Performance Evaluation Department</div></h1>
+<p class="hero-desc">An executive professional with a strong record in institutional governance, performance management, and executive administration within higher education, supported by a solid background in media and institutional communication.</p>
+<div class="contact-row">
+<a class="contact-link" href="mailto:iarashed@live.com"><span class="contact-icon">✉</span>iarashed@live.com</a>
+<a class="contact-link" href="tel:+201002825028"><span class="contact-icon">☎</span>+20 100 282 5028</a>
+<a class="contact-link" href="https://www.linkedin.com/" target="_blank"><span class="contact-icon">in</span>LinkedIn</a>
+<a class="contact-link" href="https://wa.me/201002825028" target="_blank"><span class="contact-icon">◉</span>WhatsApp</a>
+</div>
+<div class="hero-actions"><a class="btn btn-primary" href="assets/Ahmed-Rashed-CV.pdf" download>↓ &nbsp; DOWNLOAD CV</a><a class="btn btn-secondary" href="#career">VIEW CAREER ↗</a></div>
+</div>
+<div class="hero-photo reveal">
+<div class="photo-frame"><img src="assets/profile.jpg" alt="Ahmed Rashed" onerror="this.src='assets/portrait-placeholder.svg'"><div class="photo-label"><small>CURRENT POSITION</small><strong>Director of Governance & Performance Evaluation Department</strong></div></div>
+</div>
+</section>
+
+<section class="section" id="about">
+<div class="container">
+<div class="section-head reveal"><div class="section-icon">♙</div><div><h2 class="section-title">ABOUT ME</h2><p class="section-subtitle">Executive administration · Governance · Performance evaluation · Institutional communication</p></div></div>
+<p class="about-text reveal">I am an executive professional with expertise in governance, performance evaluation, and institutional management. My experience combines executive administration in higher education with a strong background in media and .nav-links{display:flex;gap:25px;font-size:14px;font-weight:700;color:#2d3b4a}
 .nav-links a{padding:27px 0;border-bottom:2px solid transparent}
 .nav-links a:hover,.nav-links a.active{color:var(--cyan);border-bottom-color:var(--cyan)}
 .nav-tools{display:flex;gap:8px}.tool{height:34px;min-width:34px;padding:0 9px;border:1px solid #d9e0e5;background:#fff;border-radius:7px;color:var(--navy);cursor:pointer;font-size:14px}
