@@ -509,4 +509,204 @@ footer{
       <article class="timeline-item left reveal">
         <span class="timeline-dot"></span>
         <div class="timeline-card">
-          <div class="ti
+          <div class="timeline-date">APR 2019 — OCT 2022</div>
+          <h3>Mansoura University</h3>
+          <div class="timeline-role">Media Officer · Community Service &amp; Environmental Development Sector</div>
+          <p>Media work and membership of the Technical Office supporting the Vice President, providing substantial exposure to administrative coordination and institutional work.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item right reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-card">
+          <div class="timeline-date">2016 — 2022</div>
+          <h3>Media Lecturer</h3>
+          <div class="timeline-role">Private Academy</div>
+          <p>Teaching media fundamentals, journalism, web design, media rhetoric, citizen journalism, social networks, news and reporting.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item left reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-card">
+          <div class="timeline-date">2016 — 2018</div>
+          <h3>oLessons.net</h3>
+          <div class="timeline-role">Front-End Developer &amp; Lecturer</div>
+          <p>Website development and preparation of visual and video educational content covering software and digital tools.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="dual" id="administration">
+  <div class="dual-grid">
+
+    <div class="dual-column">
+      <div class="section-head">
+        <div class="section-icon">⚙</div>
+        <div>
+          <h2 class="section-title">ADMINISTRATION</h2>
+          <p class="section-subtitle">Core executive and institutional responsibilities.</p>
+        </div>
+      </div>
+
+      <div class="admin-list">
+        <div class="admin-row"><div class="admin-icon">▣</div><span>Executive Office Management</span></div>
+        <div class="admin-row"><div class="admin-icon">♟</div><span>University Council Affairs</span></div>
+        <div class="admin-row"><div class="admin-icon">▤</div><span>Board of Trustees Affairs</span></div>
+        <div class="admin-row"><div class="admin-icon">↔</div><span>Administrative Coordination</span></div>
+        <div class="admin-row"><div class="admin-icon">▧</div><span>Official Correspondence &amp; Documentation</span></div>
+        <div class="admin-row"><div class="admin-icon">✓</div><span>Follow-up &amp; Reporting</span></div>
+      </div>
+    </div>
+
+    <div class="dual-column" id="skills">
+      <div class="section-head">
+        <div class="section-icon">▥</div>
+        <div>
+          <h2 class="section-title">SKILLS</h2>
+          <p class="section-subtitle">Key professional capabilities.</p>
+        </div>
+      </div>
+
+      <div class="skills-list">
+        <div class="skill-row" data-value="95"><span class="skill-name">Strategic Administration</span><div class="bar"><div class="fill"></div></div><span class="skill-percent">95%</span></div>
+        <div class="skill-row" data-value="90"><span class="skill-name">Governance &amp; Compliance</span><div class="bar"><div class="fill"></div></div><span class="skill-percent">90%</span></div>
+        <div class="skill-row" data-value="95"><span class="skill-name">Performance Management</span><div class="bar"><div class="fill"></div></div><span class="skill-percent">95%</span></div>
+        <div class="skill-row" data-value="90"><span class="skill-name">Leadership &amp; Team Management</span><div class="bar"><div class="fill"></div></div><span class="skill-percent">90%</span></div>
+        <div class="skill-row" data-value="90"><span class="skill-name">Communication &amp; Public Relations</span><div class="bar"><div class="fill"></div></div><span class="skill-percent">90%</span></div>
+        <div class="skill-row" data-value="85"><span class="skill-name">Data Analysis &amp; Reporting</span><div class="bar"><div class="fill"></div></div><span class="skill-percent">85%</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section education" id="education">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-icon">▰</div>
+      <div>
+        <h2 class="section-title">EDUCATION</h2>
+        <p class="section-subtitle">Academic foundation in media, communication and higher education.</p>
+      </div>
+    </div>
+
+    <div class="edu-grid">
+      <article class="edu-card reveal">
+        <div class="edu-year">2015 — 2018</div>
+        <h3>Ph.D.</h3>
+        <h4>Educational Media · Radio &amp; Television</h4>
+        <p>Mansoura University</p>
+        <small>Research on social issues represented in animated sketches on YouTube channels and their relationship to university students' perception of social reality.</small>
+      </article>
+
+      <article class="edu-card reveal">
+        <div class="edu-year">2012 — 2014</div>
+        <h3>Master's</h3>
+        <h4>Media · Radio &amp; Television</h4>
+        <p>Mansoura University</p>
+        <small>Analytical and field study of satirical television programs and their influence on university students' attitudes toward political topics.</small>
+      </article>
+
+      <article class="edu-card reveal">
+        <div class="edu-year">2005 — 2009</div>
+        <h3>Bachelor's</h3>
+        <h4>Specific Education · Media Department</h4>
+        <p>Mansoura University</p>
+        <small>Academic foundation in media, journalism and communication.</small>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>© 2026 Ahmed H. Rashed. All rights reserved.</span>
+  <span>GOVERNANCE · EXECUTIVE ADMINISTRATION · INSTITUTIONAL AFFAIRS</span>
+  <a class="top" href="#home">↑</a>
+</footer>
+
+<script>
+/* Reveal animations */
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+/* Animated skill percentages */
+const skillObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const row=entry.target;
+      const value=row.dataset.value;
+      row.querySelector(".fill").style.width=value+"%";
+      skillObserver.unobserve(row);
+    }
+  });
+},{threshold:.35});
+document.querySelectorAll(".skill-row").forEach(row=>skillObserver.observe(row));
+
+/* Active navigation */
+const navItems=[...document.querySelectorAll(".nav-links a")];
+const sections=[...document.querySelectorAll("main section[id]")];
+const navObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      navItems.forEach(item=>item.classList.toggle("active",item.getAttribute("href")==="#"+entry.target.id));
+    }
+  });
+},{rootMargin:"-45% 0px -50% 0px"});
+sections.forEach(section=>navObserver.observe(section));
+
+/* Theme */
+const theme=document.getElementById("theme");
+if(localStorage.getItem("theme")==="dark") document.body.classList.add("dark");
+function updateThemeIcon(){theme.textContent=document.body.classList.contains("dark")?"☀":"☼"}
+updateThemeIcon();
+theme.addEventListener("click",()=>{
+  document.body.classList.toggle("dark");
+  localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light");
+  updateThemeIcon();
+});
+
+/* Font controls: 14px base, 12px–18px range */
+const fontDown=document.getElementById("fontDown");
+const fontReset=document.getElementById("fontReset");
+const fontUp=document.getElementById("fontUp");
+let fontSize=parseInt(localStorage.getItem("fontSize")||"14",10);
+
+function applyFont(){
+  fontSize=Math.max(12,Math.min(18,fontSize));
+  document.documentElement.style.setProperty("--base-font",fontSize+"px");
+  localStorage.setItem("fontSize",fontSize);
+  fontDown.disabled=fontSize<=12;
+  fontUp.disabled=fontSize>=18;
+}
+fontDown.addEventListener("click",()=>{fontSize--;applyFont()});
+fontReset.addEventListener("click",()=>{fontSize=14;applyFont()});
+fontUp.addEventListener("click",()=>{fontSize++;applyFont()});
+applyFont();
+
+/* Mobile menu */
+const menuBtn=document.getElementById("menuBtn");
+const mobileMenu=document.getElementById("mobileMenu");
+mobileMenu.innerHTML=navItems.map(item=>`<a href="${item.getAttribute("href")}">${item.textContent}</a>`).join("");
+menuBtn.addEventListener("click",()=>mobileMenu.classList.toggle("open"));
+mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>mobileMenu.classList.remove("open")));
+
+/* Arabic button */
+document.getElementById("lang").addEventListener("click",()=>{
+  alert("An Arabic version can be added as a separate localized page.");
+});
+</script>
+</body>
+</html>
